@@ -9,7 +9,7 @@ const Home = ({ navigation }) => {
         Keyboard.dismiss()
     }
 
-    const scrollViewRef = useRef(null); // Burada ScrollView referansını tanımlıyoruz.
+    const scrollViewRef = useRef(null); 
 
     const [selectedIndex, setSelectedIndex] = useState(0);
     const windowWidth = Dimensions.get('window').width;

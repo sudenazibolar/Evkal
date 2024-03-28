@@ -19,6 +19,11 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
                 const isFocused = state.index === index;
 
                 const onPress = () => {
+                    if(label === 'My Cart')
+                    {
+                        navigation.navigate('Confirm Payment');
+                    }
+                    else{
                     const event = navigation.emit({
                         type: 'tabPress',
                         target: route.key,
@@ -27,7 +32,7 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
 
                     if (!isFocused && !event.defaultPrevented) {
                         navigation.navigate(route.name);
-                    }
+                    }}
                 };
 
                 let iconSource;
@@ -60,7 +65,7 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
                                 <Image
                                     source={iconSource}
                                     resizeMode='contain'
-                                    style={{  tintColor: isFocused ? '#000' : '#fff',width:24,height:24 }}
+                                    style={{  tintColor: isFocused ? '#fff' : '#fff',width:24,height:24 }}
                                 />
                             </View>
                         ) : (

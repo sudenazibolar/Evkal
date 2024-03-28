@@ -15,12 +15,9 @@ const Login = ({ navigation }) => {
 
     const handleSignIn = () => {
 
-        if (email === 'evkal' && password === 'sudeibolar') {
+        if (email === '' && password === '') {
             navigation.navigate('MainTabs');
-            alert('Login successful');
-
         } else {
-
             alert('Email and password are required.');
         }
     };

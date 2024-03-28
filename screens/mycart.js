@@ -1,8 +1,7 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React, { useState, useRef } from "react";
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, Dimensions, Image, TouchableHighlight, SafeAreaView, Keyboard, TouchableWithoutFeedback } from 'react-native';
 
 const MyCart = () => {
-  return <Text>Hello</Text>;
-};
-
+  
+}
 export default MyCart;
